@@ -9,3 +9,19 @@ const getCoordinates = async location => {
 
   return { lat, lon };
 };
+
+const getWeatherData = async location => {
+  const coordinates = await getCoordinates(location);
+  const lat = coordinates.lat;
+  const lon = coordinates.lon;
+
+  try {
+    const weather = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}units=${units}&appid=c0ce5c434457e791f019f4b386f41af3`, { mode: 'cors' })
+    const weatherData = await weather.json();
+    
+    console.log(weatherData);
+    return weatherData;
+  } catch {
+    err => console.log(err);
+  }
+};
