@@ -1,0 +1,42 @@
+.weather-searcher {
+  display: flex;
+  flex-direction: column;
+  background: var(--clr-beige);
+  padding: 1.5rem;
+  border-radius: .5rem;
+  width: min(800px, 90%);
+  gap: 3rem;
+}
+
+.weather-searcher > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.weather-searcher > div:first-child form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: clamp(1.2rem, 1.4rem, 2vw);
+}
+
+.weather-searcher > div:first-child div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.weather-searcher > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.weather-searcher > div:last-child div {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
