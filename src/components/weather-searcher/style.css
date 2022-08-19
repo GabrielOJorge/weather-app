@@ -1,42 +1,88 @@
-.weather-searcher {
+.weather-searcher, .weather-searcher div {
   display: flex;
+}
+
+.weather-searcher > div:first-child, .weather-searcher #form, .weather-searcher .btn-wrapper {
+  flex-wrap: wrap;
+}
+
+.weather-searcher #form, .weather-searcher .btn-wrapper, .weather-data :last-child, .weather-data .temp {
+  gap: 1rem;
+}
+
+.weather-searcher, .weather-data, .weather-data > div, .weather-data .data div:last-child {
   flex-direction: column;
+}
+
+.weather-searcher {
   background: var(--clr-beige);
-  padding: 1.5rem;
+  padding: 3rem 2rem;
   border-radius: .5rem;
   width: min(800px, 90%);
   gap: 3rem;
 }
 
 .weather-searcher > div:first-child {
-  display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
   gap: 1.5rem;
 }
 
-.weather-searcher > div:first-child form {
+.weather-searcher #form {
+  position: relative;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 1rem;
   font-size: clamp(1.2rem, 1.4rem, 2vw);
 }
 
-.weather-searcher > div:first-child div {
-  display: flex;
-  flex-wrap: wrap;
+.weather-searcher #form :first-child {
   gap: 1rem;
 }
 
-.weather-searcher > div:last-child {
-  display: flex;
+.weather-searcher .locations-responses {
+  display: none;
+  position: absolute;
+  top: 5rem;
   flex-direction: column;
+  background: #fff;
+  width: 100%;
+  border-radius: .3rem;
+  gap: 1rem;
+  padding: 1rem .5rem;
+}
+
+.locations-responses > div {
+  padding: 1rem 1.5rem;
+  border-radius: .3rem;
+}
+
+.weather-searcher .locations-responses.-active {
+  display: flex;
+}
+
+.locations-responses > div:hover {
+  background: var(--clr-light-grey);
+  cursor: pointer;
+}
+
+.weather-data {
   gap: 2rem;
 }
 
-.weather-searcher > div:last-child div {
-  display: flex;
-  flex-direction: column;
+.weather-data > div {
   gap: .5rem;
 }
 
+.weather-data #description {
+  font-weight: 700;
+}
+
+.weather-data .temp {
+  align-items: center;
+}
+
+.weather-data .data div:last-child {
+  gap: .5rem;
+  border-left: 1px solid #000;
+  padding-left: 1rem;
+}
