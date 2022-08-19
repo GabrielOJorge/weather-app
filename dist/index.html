@@ -5,21 +5,63 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/c9177c3399.js" crossorigin="anonymous"></script>
-  <link rel="icon" type="image/x-icon" href="../src/assets/images/smog-solid.svg">
+  <link rel="icon" type="image/x-icon" href="../src/assets/images/meteor-solid.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="../src/style/generic/reset.css">
   <link rel="stylesheet" href="../src/style/elements/base.css">
   <link rel="stylesheet" href="../src/style/settings/colors.css">
+  <link rel="stylesheet" href="../src/components/weather-searcher/style.css">
+  <link rel="stylesheet" href="../src/components/main-btn/style.css">
+  <link rel="stylesheet" href="../src/components/loading-screen/style.css">
   <title>Weather App</title>
 </head>
 <body>
-  <main>
-    <h1 id="h1"></h1>
-    <form id="form" action="#">
-      <div>
-        <input id="city" type="text" placeholder="Location">
-        <button type="submit">Search</button>
+  <div class="loading-screen">
+    <div class="spinner"></div>
+  </div>
+
+  <main class="weather-searcher">
+    <div>
+      <form id="form" action="#">
+        <div>
+          <input type="text" placeholder="Location">
+          <button id="search-btn" type="submit" class="main-btn">Search</button>
+        </div>
+
+        <div class="locations-responses">
+        </div>
+      </form>
+
+      <div class="btn-wrapper">
+        <button class="main-btn -unit" value="metric">Metric: °C, m/s</button>
+        <button class="main-btn -unit" value="imperial">Imperial: °F, mph</button>
       </div>
-    </form>
+    </div>
+
+    <div class="weather-data">
+      <div>
+        <h3 id="date-time"></h3>
+        <h1 id="city"></h1>
+      </div>
+
+      <div class="data">
+        <div class="temp">
+          <i id="temp-icon" class=""></i>
+          <i class="fa-solid fa-cloud-drizzle"></i>
+          <h2 id="temp"></h2>
+        </div>
+
+        <h3 id="description"></h3>
+
+        <div>
+          <h3 id="high-low-temp"></h3>
+          <h3 id="wind-speed"></h3>
+          <h3 id="humidity"></h3>
+        </div>
+      </div>
+    </div>
   </main>
   <script src="main.js"></script>
 </body>
