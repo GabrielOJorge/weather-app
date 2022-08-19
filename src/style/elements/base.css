@@ -1,0 +1,55 @@
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--clr-dark-blue);
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  font-size: clamp(2.4rem, 3rem, 4vw);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: clamp(3rem, 3.6rem, 3vw);
+  font-weight: 500;
+}
+
+h3, input {
+  font-size: clamp(1.4rem, 1.6rem, 1vw);
+}
+
+input, button {
+  border-style: none;
+  border-radius: .3rem;
+  padding: 1rem 2rem;
+}
+
+input {
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+i {
+  font-size: clamp(2.4rem, 3rem, 3vw);
+}
+
+iconify-icon {
+  font-size: clamp(5.4rem, 6rem, 4vw);
+}
+
+.iconify {
+  font-size: clamp(3.6rem, 4rem, 4vw);
+}
+
+@media (min-width: 380px) {
+  input {
+    width: initial;
+  }
+}

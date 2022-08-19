@@ -1,0 +1,13 @@
+.main-btn {
+  font-size: clamp(1.2rem, 1.4rem, 2vw);
+  background: var(--clr-light-grey);
+  transition: background .3s ease-out;
+}
+
+.main-btn:hover {
+  background: var(--clr-grey);
+}
+
+.main-btn:active {
+  transform: translateY(-0.6px);
+}
