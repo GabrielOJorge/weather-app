@@ -145,8 +145,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-let currentLat;
-let currentLon;
+let currentLat = 51.5085300;
+let currentLon = -0.1257400;
 
 const createResponseDiv = () => {
   const div = document.createElement('div');
